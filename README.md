@@ -1,6 +1,6 @@
 # REA CLI
 
-![REA CLI](assets/hero.svg)
+![REA CLI analyzing an APK in Windows Terminal](assets/screenshots/01-analyze.png)
 
 A standalone terminal workbench for reverse engineering **binaries, applications and
 bytecode** on Windows. Drop a file on `rea.exe` and it identifies the format, decompiles
@@ -55,33 +55,46 @@ remote paths are refused before any work starts.
 
 ## Screenshots
 
-### One pass, five stages
+Every terminal image in this section is a real capture of the packaged `dist\rea.exe`
+running in Windows Terminal. `tests\capture_screenshots.ps1` starts the console, runs the
+command, waits for the run to finish, and captures the window pixels. There are no
+terminal mockups; the workflow figure at the end is a diagram and is labelled as one.
+
+### Analyze an APK: live trace, header and manifest facts
+
+![Analyze sample.apk](assets/screenshots/01-analyze.png)
+
+### Source recovery ends with files on disk
+
+![Recovered Java source list](assets/screenshots/02-source.png)
+
+### The shell that stays open after a drag and drop
+
+![Interactive shell](assets/screenshots/03-shell.png)
+
+### Strings with their file offsets
+
+![Strings](assets/screenshots/04-strings.png)
+
+### Compare two artifacts field by field
+
+![Compare APK and JAR](assets/screenshots/05-compare.png)
+
+### Python bytecode turned back into source
+
+![Python source recovery](assets/screenshots/06-pyc.png)
+
+### The lifted Java file itself
+
+![Recovered Java code](assets/screenshots/07-code.png)
+
+### The command surface
+
+![Help](assets/screenshots/08-help.png)
+
+### How a run is wired (diagram)
 
 ![Workflow](assets/workflow.svg)
-
-### Live trace while an APK is analyzed
-
-![Terminal trace](assets/terminal.svg)
-
-### The shell you land in after a drag and drop
-
-![Interactive shell](assets/shell.svg)
-
-### Readers for the formats you actually meet
-
-![Supported formats](assets/formats.svg)
-
-### Source files, not just bytecode
-
-![Recovered source](assets/sources.svg)
-
-### Offline by construction
-
-![Offline policy](assets/offline.svg)
-
-### What a run leaves behind
-
-![Output and evidence](assets/output.svg)
 
 ---
 
@@ -256,6 +269,8 @@ Errors are caught and printed; a bad path never terminates the shell.
 ---
 
 ## Supported formats
+
+![Readers grouped by format family](assets/formats.svg)
 
 Detection is content-first: a renamed file keeps the interpretation its bytes support.
 
@@ -524,6 +539,9 @@ Fixtures are assembled from bytes (WASM, ELF, Mach-O, class file, DEX, AXML, ASA
 APK, SQLite, JS app), so the suite runs without compilers or network. Current state:
 0 failures across the full Python fixture set and every packaged-EXE target.
 
+`tests\capture_screenshots.ps1` regenerates the README captures from the packaged EXE
+(`-Only 01-analyze` re-shoots a single frame).
+
 ---
 
 ## Project layout
@@ -556,9 +574,10 @@ rea-cli\
       archive.py             archives and nested analysis
       sqlite_db.py, beam.py, blob.py
       sourcegen.py           shared emitter helpers
-  assets\                    vector figures used by this README
+  assets\                    diagrams used by this README
+  assets\screenshots\        real console captures used by this README
   build\                     spec and build script
-  tests\                     fixtures and smoke suites
+  tests\                     fixtures, smoke suites and screenshot capture
   dist\rea.exe               release executable
 ```
 

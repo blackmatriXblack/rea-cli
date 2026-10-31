@@ -1,0 +1,268 @@
+{
+  "ok": true,
+  "tool": {
+    "name": "rea-cli",
+    "version": "1.0.0",
+    "label": "REA CLI (offline)"
+  },
+  "command": "analyze",
+  "engine": {
+    "name": "rea-cli-builtin",
+    "kind": "builtin-static",
+    "downloads": "refused",
+    "external": []
+  },
+  "evidence_id": "ev_f4bb52207a2219f539ed9a1f",
+  "target": {
+    "path": "C:\\Users\\appler\\Desktop\\reacli\\rea-cli\\fixtures\\Sample.class",
+    "name": "Sample.class",
+    "size": 203,
+    "sha256": "94db01074bf4a0505f126fd2e090aaa8679415312f94aa3358e349b93ad78eed",
+    "format_label": "Java class file (major 52, minor 0)",
+    "detected_by": "magic"
+  },
+  "format": "java-class",
+  "format_label": "Java class demo/Hello",
+  "summary": {
+    "class": "demo/Hello",
+    "super": "java/lang/Object",
+    "interfaces": 0,
+    "fields": 0,
+    "methods": 2,
+    "class_file_version": "52.0 (Java 8)",
+    "flags": "ACC_PUBLIC, ACC_SUPER"
+  },
+  "normalized_result": {
+    "class_name": "demo/Hello",
+    "super_class": "java/lang/Object",
+    "interfaces": [],
+    "access_flags": 33,
+    "flags": [
+      "ACC_PUBLIC",
+      "ACC_SUPER"
+    ],
+    "class_file_version": {
+      "major": 52,
+      "minor": 0,
+      "release": "8"
+    },
+    "constant_pool_count": 13,
+    "fields": [],
+    "methods": [
+      {
+        "access_flags": 1,
+        "flags": [
+          "ACC_PUBLIC"
+        ],
+        "name": "<init>",
+        "descriptor": "()V",
+        "attributes": [
+          {
+            "name": "Code",
+            "length": 17
+          }
+        ],
+        "code": {
+          "max_stack": 1,
+          "max_locals": 1,
+          "code_length": 5,
+          "bytecode_sha256": "4cb6a0ce460da5ed2a4bdd3559ce5cf34fb5c05f2f1946cc486824a646cdf287",
+          "instructions": [
+            {
+              "offset": 0,
+              "opcode": 42,
+              "mnemonic": "aload_0",
+              "operands": "",
+              "resolved": [],
+              "length": 1
+            },
+            {
+              "offset": 1,
+              "opcode": 183,
+              "mnemonic": "invokespecial",
+              "operands": "#8",
+              "resolved": [
+                "Methodref java/lang/Object.<init>:()V"
+              ],
+              "length": 3
+            },
+            {
+              "offset": 4,
+              "opcode": 177,
+              "mnemonic": "return",
+              "operands": "",
+              "resolved": [],
+              "length": 1
+            }
+          ],
+          "disassembly": [
+            "     0: aload_0         ",
+            "     1: invokespecial   #8  // Methodref java/lang/Object.<init>:()V",
+            "     4: return          "
+          ],
+          "exception_table": [],
+          "line_numbers": [],
+          "local_variables": []
+        }
+      },
+      {
+        "access_flags": 9,
+        "flags": [
+          "ACC_PUBLIC",
+          "ACC_STATIC"
+        ],
+        "name": "add",
+        "descriptor": "(II)I",
+        "attributes": [
+          {
+            "name": "Code",
+            "length": 16
+          }
+        ],
+        "code": {
+          "max_stack": 2,
+          "max_locals": 2,
+          "code_length": 4,
+          "bytecode_sha256": "c935a08993238ff698bc1af711b14ffba4f486b308213d649e8b380275e0748b",
+          "instructions": [
+            {
+              "offset": 0,
+              "opcode": 26,
+              "mnemonic": "iload_0",
+              "operands": "",
+              "resolved": [],
+              "length": 1
+            },
+            {
+              "offset": 1,
+              "opcode": 27,
+              "mnemonic": "iload_1",
+              "operands": "",
+              "resolved": [],
+              "length": 1
+            },
+            {
+              "offset": 2,
+              "opcode": 96,
+              "mnemonic": "iadd",
+              "operands": "",
+              "resolved": [],
+              "length": 1
+            },
+            {
+              "offset": 3,
+              "opcode": 172,
+              "mnemonic": "ireturn",
+              "operands": "",
+              "resolved": [],
+              "length": 1
+            }
+          ],
+          "disassembly": [
+            "     0: iload_0         ",
+            "     1: iload_1         ",
+            "     2: iadd            ",
+            "     3: ireturn         "
+          ],
+          "exception_table": [],
+          "line_numbers": [],
+          "local_variables": []
+        }
+      }
+    ],
+    "class_attributes": [
+      {
+        "name": "SourceFile",
+        "length": 2
+      }
+    ],
+    "source": {
+      "language": "java",
+      "files": [
+        "sources/java/demo/Hello.java"
+      ]
+    }
+  },
+  "coverage": {
+    "status": "complete",
+    "examined": 2,
+    "total": 2,
+    "exhausted": true
+  },
+  "limitations": [],
+  "observations": [
+    "Java source was reconstructed from bytecode; verify it against the javap listing."
+  ],
+  "trace": [
+    {
+      "ms": 0,
+      "message": "sha256 94db01074bf4a050..."
+    },
+    {
+      "ms": 0,
+      "message": "detected Java class file (major 52, minor 0) [java-class]"
+    },
+    {
+      "ms": 1,
+      "message": "constant pool: 13 entries"
+    },
+    {
+      "ms": 1,
+      "message": "members: 0 fields, 2 methods"
+    },
+    {
+      "ms": 3,
+      "message": "reconstructing Java source from bytecode"
+    },
+    {
+      "ms": 4,
+      "message": "Java source: sources/java/demo/Hello.java"
+    },
+    {
+      "ms": 4,
+      "message": "reader finished: 2 artifact(s), 0 limitation(s)"
+    },
+    {
+      "ms": 4,
+      "message": "collecting the local engine inventory"
+    },
+    {
+      "ms": 62,
+      "message": "engines available: 0"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "sources/demo/Hello.javap.txt",
+      "bytes": 699,
+      "kind": "disassembly"
+    },
+    {
+      "path": "sources/java/demo/Hello.java",
+      "bytes": 504,
+      "kind": "source"
+    }
+  ],
+  "next_steps": [
+    "Open the .javap.txt artifact for the complete member and bytecode listing.",
+    "Local javap/jadx are not required; both are optional external engines."
+  ],
+  "detection": {
+    "format": "java-class",
+    "label": "Java class file (major 52, minor 0)",
+    "detected_by": "magic",
+    "container": null,
+    "details": {
+      "major": 52,
+      "minor": 0
+    }
+  },
+  "output": {
+    "directory": "C:\\Users\\appler\\Desktop\\reacli\\rea-cli\\fixtures\\Sample.class.rea",
+    "sources": [
+      "C:\\Users\\appler\\Desktop\\reacli\\rea-cli\\fixtures\\Sample.class.rea\\sources\\demo\\Hello.javap.txt",
+      "C:\\Users\\appler\\Desktop\\reacli\\rea-cli\\fixtures\\Sample.class.rea\\sources\\java\\demo\\Hello.java"
+    ],
+    "files": 2
+  }
+}

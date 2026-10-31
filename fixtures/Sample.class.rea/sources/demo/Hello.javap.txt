@@ -1,0 +1,24 @@
+# javap-style disassembly
+# artifact : C:\Users\appler\Desktop\reacli\rea-cli\fixtures\Sample.class
+# sha256   : 94db01074bf4a0505f126fd2e090aaa8679415312f94aa3358e349b93ad78eed
+# class    : demo/Hello
+# version  : 52.0
+
+public super class demo/Hello extends java/lang/Object
+{
+  public void <init>();
+    descriptor: ()V
+    Code: stack=1, locals=1
+           0: aload_0         
+           1: invokespecial   #8  // Methodref java/lang/Object.<init>:()V
+           4: return          
+
+  public static int add(int, int);
+    descriptor: (II)I
+    Code: stack=2, locals=2
+           0: iload_0         
+           1: iload_1         
+           2: iadd            
+           3: ireturn         
+
+}

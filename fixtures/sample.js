@@ -1,0 +1,2 @@
+const fs=require("fs");const https=require("https");function load(p){return fs.readFileSync(p,"utf8");}class Loader{constructor(root){this.root=root;}}const endpoint="https://api.example.com/v1/items?limit=50";module.exports={load,Loader,endpoint};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjogMywgInNvdXJjZXMiOiBbInNyYy9sb2FkZXIudHMiXSwgIm5hbWVzIjogW10sICJtYXBwaW5ncyI6ICJBQUFBIn0=

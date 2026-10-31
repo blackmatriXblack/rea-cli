@@ -1,0 +1,49 @@
+REA CLI (offline) 1.0.0
+engine: rea-cli-builtin (builtin-static)   downloads: refused   evidence: ev_4191f8af68b80b1a80dc8d8b
+==============================================================================
+TARGET      C:\Users\appler\Desktop\reacli\rea-cli\fixtures\sample.dex
+FORMAT      Dalvik executable (DEX 035)
+SIZE        314 B (314 bytes)
+SHA-256     74413056b700e1b85e07069fd2658083c3ccd4a3c80be12016268ee2b7c8d7de
+COMMAND     analyze
+
+-- Overview ------------------------------------------------------------------
+  version               035
+  classes               1
+  methods               1
+  fields                0
+  strings               7
+  instructions          2
+  file_size             314 B
+  checksum_ok           true
+
+-- Classes -------------------------------------------------------------------
+  Ldemo/Hello;                                             methods=1    fields=0
+
+-- Recovered Java skeletons --------------------------------------------------
+  1 file(s) with exact signatures and smali body anchors
+  sources/java/demo/Hello.java
+
+-- Process -------------------------------------------------------------------
+         0 ms  sha256 74413056b700e1b8...
+         0 ms  detected Dalvik executable (DEX 035) [dex]
+        22 ms  dex 035: 7 strings, 1 methods
+        22 ms  lifting Java method bodies from Dalvik registers
+        47 ms  Java skeletons: 1 file(s)
+        88 ms  reader finished: 2 artifact(s), 1 limitation(s)
+        88 ms  collecting the local engine inventory
+       132 ms  engines available: 0
+
+-- Decompiled artifacts ------------------------------------------------------
+  2 files, 602 B
+       247 B  sources/demo/Hello.smali
+       355 B  sources/java/demo/Hello.java
+
+-- Limitations --------------------------------------------------------------
+  - Java bodies are not lifted from Dalvik registers; each Java file points at its smali body. Install jadx locally and rerun with the engine enabled for full Java source.
+
+-- Next steps ---------------------------------------------------------------
+  - Open sources/<package>/<Class>.smali for the decoded method bodies.
+  - Java source recovery needs a local jadx; this build does not download it.
+
+coverage: status=complete, examined=1, total=1, exhausted=True

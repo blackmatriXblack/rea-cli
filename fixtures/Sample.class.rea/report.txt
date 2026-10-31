@@ -1,0 +1,72 @@
+REA CLI (offline) 1.0.0
+engine: rea-cli-builtin (builtin-static)   downloads: refused   evidence: ev_f4bb52207a2219f539ed9a1f
+==============================================================================
+TARGET      C:\Users\appler\Desktop\reacli\rea-cli\fixtures\Sample.class
+FORMAT      Java class demo/Hello
+SIZE        203 B (203 bytes)
+SHA-256     94db01074bf4a0505f126fd2e090aaa8679415312f94aa3358e349b93ad78eed
+COMMAND     analyze
+
+-- Overview ------------------------------------------------------------------
+  class                 demo/Hello
+  super                 java/lang/Object
+  interfaces            0
+  fields                0
+  methods               2
+  class_file_version    52.0 (Java 8)
+  flags                 ACC_PUBLIC, ACC_SUPER
+
+-- Constant pool -------------------------------------------------------------
+      1 = Utf8               demo/Hello
+      2 = Class              class demo/Hello
+      3 = Utf8               java/lang/Object
+      4 = Class              class java/lang/Object
+      5 = Utf8               <init>
+      6 = Utf8               ()V
+      7 = NameAndType        NameAndType <init>:()V
+      8 = Methodref          Methodref java/lang/Object.<init>:()V
+      9 = Utf8               Code
+     10 = Utf8               SourceFile
+     11 = Utf8               Hello.java
+     12 = Utf8               add
+     13 = Utf8               (II)I
+
+-- Class ---------------------------------------------------------------------
+  flags        ACC_PUBLIC, ACC_SUPER
+  this         demo/Hello
+  super        java/lang/Object
+  SourceFile   Hello.java
+
+-- Fields --------------------------------------------------------------------
+  (no declared fields)
+
+-- Methods -------------------------------------------------------------------
+  void <init>()    flags=public
+      bytecode 5 bytes, 3 instructions, stack=1, locals=1
+  int add(int, int)    flags=public static
+      bytecode 4 bytes, 4 instructions, stack=2, locals=2
+
+-- Recovered Java source -----------------------------------------------------
+  sources/java/demo/Hello.java
+
+-- Process -------------------------------------------------------------------
+         0 ms  sha256 94db01074bf4a050...
+         0 ms  detected Java class file (major 52, minor 0) [java-class]
+         1 ms  constant pool: 13 entries
+         1 ms  members: 0 fields, 2 methods
+         3 ms  reconstructing Java source from bytecode
+         4 ms  Java source: sources/java/demo/Hello.java
+         4 ms  reader finished: 2 artifact(s), 0 limitation(s)
+         4 ms  collecting the local engine inventory
+        62 ms  engines available: 0
+
+-- Decompiled artifacts ------------------------------------------------------
+  2 files, 1.17 KiB
+       699 B  sources/demo/Hello.javap.txt
+       504 B  sources/java/demo/Hello.java
+
+-- Next steps ---------------------------------------------------------------
+  - Open the .javap.txt artifact for the complete member and bytecode listing.
+  - Local javap/jadx are not required; both are optional external engines.
+
+coverage: status=complete, examined=2, total=2, exhausted=True

@@ -1,0 +1,3 @@
+source files for C:\Users\appler\Desktop\reacli\rea-cli\fixtures\sample.dex
+
+       355  C:\Users\appler\Desktop\reacli\rea-cli\fixtures\sample.dex.rea\sources/java/demo/Hello.java

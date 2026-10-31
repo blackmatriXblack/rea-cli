@@ -1,0 +1,160 @@
+{
+  "ok": true,
+  "tool": {
+    "name": "rea-cli",
+    "version": "1.0.0",
+    "label": "REA CLI (offline)"
+  },
+  "command": "analyze",
+  "engine": {
+    "name": "rea-cli-builtin",
+    "kind": "builtin-static",
+    "downloads": "refused",
+    "external": []
+  },
+  "evidence_id": "ev_4191f8af68b80b1a80dc8d8b",
+  "target": {
+    "path": "C:\\Users\\appler\\Desktop\\reacli\\rea-cli\\fixtures\\sample.dex",
+    "name": "sample.dex",
+    "size": 314,
+    "sha256": "74413056b700e1b85e07069fd2658083c3ccd4a3c80be12016268ee2b7c8d7de",
+    "format_label": "Dalvik executable (DEX 035)",
+    "detected_by": "magic"
+  },
+  "format": "dex",
+  "format_label": "Dalvik executable (DEX 035)",
+  "summary": {
+    "version": "035",
+    "classes": 1,
+    "methods": 1,
+    "fields": 0,
+    "strings": 7,
+    "instructions": 2,
+    "file_size": "314 B",
+    "checksum_ok": true
+  },
+  "normalized_result": {
+    "version": "035",
+    "checksum_ok": true,
+    "file_size": 314,
+    "counts": {
+      "strings": 7,
+      "types": 4,
+      "methods": 1,
+      "fields": 0,
+      "classes": 1,
+      "instructions": 2
+    },
+    "classes": [
+      {
+        "descriptor": "Ldemo/Hello;",
+        "super": "Ljava/lang/Object;",
+        "interfaces": [],
+        "source_file": "demo/Hello.java",
+        "access_flags": 1,
+        "flags": [
+          "public"
+        ],
+        "fields": [],
+        "methods": [
+          {
+            "name": "add",
+            "parameters": "II",
+            "returns": "I",
+            "flags": [
+              "public",
+              "static"
+            ],
+            "code_offset": 284
+          }
+        ],
+        "path": "sources/demo/Hello.smali"
+      }
+    ],
+    "source": {
+      "language": "java",
+      "files": [
+        "sources/java/demo/Hello.java"
+      ],
+      "bodies": "smali"
+    }
+  },
+  "coverage": {
+    "status": "complete",
+    "examined": 1,
+    "total": 1,
+    "exhausted": true
+  },
+  "limitations": [
+    "Java bodies are not lifted from Dalvik registers; each Java file points at its smali body. Install jadx locally and rerun with the engine enabled for full Java source."
+  ],
+  "observations": [],
+  "trace": [
+    {
+      "ms": 0,
+      "message": "sha256 74413056b700e1b8..."
+    },
+    {
+      "ms": 0,
+      "message": "detected Dalvik executable (DEX 035) [dex]"
+    },
+    {
+      "ms": 22,
+      "message": "dex 035: 7 strings, 1 methods"
+    },
+    {
+      "ms": 22,
+      "message": "lifting Java method bodies from Dalvik registers"
+    },
+    {
+      "ms": 47,
+      "message": "Java skeletons: 1 file(s)"
+    },
+    {
+      "ms": 88,
+      "message": "reader finished: 2 artifact(s), 1 limitation(s)"
+    },
+    {
+      "ms": 88,
+      "message": "collecting the local engine inventory"
+    },
+    {
+      "ms": 132,
+      "message": "engines available: 0"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "sources/demo/Hello.smali",
+      "bytes": 247,
+      "kind": "disassembly"
+    },
+    {
+      "path": "sources/java/demo/Hello.java",
+      "bytes": 355,
+      "kind": "source"
+    }
+  ],
+  "next_steps": [
+    "Open sources/<package>/<Class>.smali for the decoded method bodies.",
+    "Java source recovery needs a local jadx; this build does not download it."
+  ],
+  "detection": {
+    "format": "dex",
+    "label": "Dalvik executable (DEX 035)",
+    "detected_by": "magic",
+    "container": null,
+    "details": {}
+  },
+  "output": {
+    "directory": "C:\\Users\\appler\\Desktop\\reacli\\rea-cli\\fixtures\\sample.dex.rea",
+    "sources": [
+      "C:\\Users\\appler\\Desktop\\reacli\\rea-cli\\fixtures\\sample.dex.rea\\sources\\demo\\Hello.smali",
+      "C:\\Users\\appler\\Desktop\\reacli\\rea-cli\\fixtures\\sample.dex.rea\\sources\\java\\demo\\Hello.java"
+    ],
+    "files": 2,
+    "source_files": [
+      "sources/java/demo/Hello.java"
+    ]
+  }
+}
