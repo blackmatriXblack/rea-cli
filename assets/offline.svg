@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Offline guarantee">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070d18"/><stop offset="1" stop-color="#0c1728"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#123a38"/><stop offset="1" stop-color="#0d2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="60" y="56" font-size="24" font-weight="700" fill="#eef6ff">Offline by construction</text>
+    <text x="60" y="82" font-size="13" fill="#8fa6c4">The tool has no network path at all: no downloads, no update checks, no telemetry.</text>
+
+    <g transform="translate(60,120)">
+      <path d="M84 0l84 30v62c0 54-42 88-84 104C42 180 0 146 0 92V30z" fill="url(#shield)" stroke="#2dd4bf" stroke-width="3"/>
+      <rect x="56" y="80" width="56" height="44" rx="8" fill="none" stroke="#7ef0dd" stroke-width="3"/>
+      <path d="M68 80V68a16 16 0 0 1 32 0v12" fill="none" stroke="#7ef0dd" stroke-width="3"/>
+      <circle cx="84" cy="100" r="5" fill="#7ef0dd"/>
+      <path d="M84 105v10" stroke="#7ef0dd" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <g transform="translate(280,120)" font-size="14">
+      <g>
+        <circle cx="12" cy="12" r="6" fill="#2dd4bf"/>
+        <text x="34" y="17" fill="#dbe9fb" font-weight="600">Remote inputs refused</text>
+        <text x="34" y="38" fill="#7f96b5" font-size="12">http, https, ftp and friends stop at the door with network_refused.</text>
+      </g>
+      <g transform="translate(0,62)">
+        <circle cx="12" cy="12" r="6" fill="#fbbf24"/>
+        <text x="34" y="17" fill="#dbe9fb" font-weight="600">Nothing is installed</text>
+        <text x="34" y="38" fill="#7f96b5" font-size="12">No package manager, no updater, no engine bundle.</text>
+      </g>
+      <g transform="translate(0,124)">
+        <circle cx="12" cy="12" r="6" fill="#60a5fa"/>
+        <text x="34" y="17" fill="#dbe9fb" font-weight="600">Local engines only</text>
+        <text x="34" y="38" fill="#7f96b5" font-size="12">jadx, ilspycmd or objdump are used only if they already exist.</text>
+      </g>
+      <g transform="translate(0,186)">
+        <circle cx="12" cy="12" r="6" fill="#c084fc"/>
+        <text x="34" y="17" fill="#dbe9fb" font-weight="600">Everything stays on disk</text>
+        <text x="34" y="38" fill="#7f96b5" font-size="12">Outputs land beside the target or in the folder you choose.</text>
+      </g>
+    </g>
+
+    <g transform="translate(760,120)">
+      <rect width="380" height="200" rx="14" fill="#0e1b2c" stroke="#233a57"/>
+      <g font-family="Cascadia Code, Consolas, monospace" font-size="12.5">
+        <text x="20" y="34" fill="#7f96b5">$ rea analyze https://example.com/app.apk</text>
+        <text x="20" y="66" fill="#f87171">error[network_refused]</text>
+        <text x="20" y="88" fill="#cfe3ff">refusing remote target</text>
+        <text x="20" y="110" fill="#7f96b5">hint: save the artifact locally and</text>
+        <text x="20" y="130" fill="#7f96b5">      pass its path.</text>
+        <text x="20" y="166" fill="#2dd4bf">downloads: refused</text>
+        <text x="20" y="186" fill="#5f7699">no network activity was attempted</text>
+      </g>
+    </g>
+  </g>
+</svg>

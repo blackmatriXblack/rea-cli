@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540" role="img" aria-label="Recovered source examples">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070d18"/><stop offset="1" stop-color="#0c1728"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101d30"/><stop offset="1" stop-color="#0b1524"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="540" fill="url(#bg)"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="50" y="46" font-size="23" font-weight="700" fill="#eef6ff">Recovered source files</text>
+    <text x="50" y="72" font-size="13" fill="#8fa6c4">Signatures, fields and lifted bodies — with the bytecode evidence kept beside them.</text>
+
+    <g transform="translate(50,96)">
+      <rect width="350" height="410" rx="14" fill="url(#card)" stroke="#25405e"/>
+      <rect width="350" height="44" rx="14" fill="#12233a"/>
+      <rect y="30" width="350" height="14" fill="#12233a"/>
+      <text x="18" y="28" font-size="13" font-weight="700" fill="#c4b5fd">C#</text>
+      <text x="52" y="28" font-size="11" fill="#7f96b5">from CIL · .NET assembly</text>
+      <g font-family="Cascadia Code, Consolas, monospace" font-size="11.5">
+        <text x="18" y="76" fill="#c4b5fd">public static int Add(int a, int b)</text>
+        <text x="18" y="98" fill="#cfe3ff">{</text>
+        <text x="34" y="120" fill="#cfe3ff">return (a + b);</text>
+        <text x="18" y="142" fill="#cfe3ff">}</text>
+        <text x="18" y="182" fill="#5f7699">// fields, enums, properties,</text>
+        <text x="18" y="202" fill="#5f7699">// branches and calls are kept</text>
+        <text x="18" y="222" fill="#5f7699">// beside sources/assembly.il</text>
+        <text x="18" y="262" fill="#7ef0dd">sources\csharp\Type.cs</text>
+      </g>
+    </g>
+
+    <g transform="translate(425,96)">
+      <rect width="350" height="410" rx="14" fill="url(#card)" stroke="#25405e"/>
+      <rect width="350" height="44" rx="14" fill="#12233a"/>
+      <rect y="30" width="350" height="14" fill="#12233a"/>
+      <text x="18" y="28" font-size="13" font-weight="700" fill="#7ef0dd">Java</text>
+      <text x="58" y="28" font-size="11" fill="#7f96b5">from class or Dalvik</text>
+      <g font-family="Cascadia Code, Consolas, monospace" font-size="11.5">
+        <text x="18" y="76" fill="#7ef0dd">public static int add(int p0, int p1)</text>
+        <text x="18" y="98" fill="#cfe3ff">{</text>
+        <text x="34" y="120" fill="#cfe3ff">int v0 = 0;</text>
+        <text x="34" y="142" fill="#cfe3ff">v0 = (p0 + p1);</text>
+        <text x="34" y="164" fill="#cfe3ff">return v0;</text>
+        <text x="18" y="186" fill="#cfe3ff">}</text>
+        <text x="18" y="226" fill="#5f7699">// typed locals, fields, invokes,</text>
+        <text x="18" y="246" fill="#5f7699">// arrays and branches; smali or</text>
+        <text x="18" y="266" fill="#5f7699">// javap stays next to the file</text>
+        <text x="18" y="306" fill="#7ef0dd">sources\java\demo\Hello.java</text>
+      </g>
+    </g>
+
+    <g transform="translate(800,96)">
+      <rect width="350" height="410" rx="14" fill="url(#card)" stroke="#25405e"/>
+      <rect width="350" height="44" rx="14" fill="#12233a"/>
+      <rect y="30" width="350" height="14" fill="#12233a"/>
+      <text x="18" y="28" font-size="13" font-weight="700" fill="#facc15">Python</text>
+      <text x="70" y="28" font-size="11" fill="#7f96b5">from pyc bytecode</text>
+      <g font-family="Cascadia Code, Consolas, monospace" font-size="11.5">
+        <text x="18" y="76" fill="#facc15">def greet(name, times):</text>
+        <text x="34" y="98" fill="#cfe3ff">parts = []</text>
+        <text x="34" y="120" fill="#cfe3ff">for i in range(times):</text>
+        <text x="50" y="142" fill="#cfe3ff">parts.append('hello ' +</text>
+        <text x="50" y="162" fill="#cfe3ff">    str(name) + ' #' + str(i))</text>
+        <text x="34" y="184" fill="#cfe3ff">return '\n'.join(parts)</text>
+        <text x="18" y="224" fill="#5f7699">// imports, classes, loops,</text>
+        <text x="18" y="244" fill="#5f7699">// f-strings and returns; the</text>
+        <text x="18" y="264" fill="#5f7699">// .dis.txt listing stays beside</text>
+        <text x="18" y="304" fill="#7ef0dd">sources\recovered\module.py</text>
+      </g>
+    </g>
+  </g>
+</svg>
