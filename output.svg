@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Output folder and evidence">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070d18"/><stop offset="1" stop-color="#0c1728"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1b2d"/><stop offset="1" stop-color="#0a1422"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="60" y="48" font-size="23" font-weight="700" fill="#eef6ff">What a run leaves behind</text>
+    <text x="60" y="74" font-size="13" fill="#8fa6c4">A readable report, machine evidence, a source index and every decompiled product.</text>
+
+    <g transform="translate(60,100)">
+      <rect width="480" height="460" rx="14" fill="url(#panel)" stroke="#25405e"/>
+      <text x="20" y="30" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12" fill="#7f96b5">OUTPUT FOLDER</text>
+      <g font-family="Cascadia Code, Consolas, monospace" font-size="12.5">
+        <text x="20" y="62" fill="#fbbf24">app.apk.rea\</text>
+        <text x="36" y="86" fill="#cfe3ff">report.txt</text>
+        <text x="36" y="110" fill="#cfe3ff">evidence.json</text>
+        <text x="36" y="134" fill="#2dd4bf">SOURCE-INDEX.txt</text>
+        <text x="36" y="158" fill="#cfe3ff">sources\</text>
+        <text x="52" y="182" fill="#93c5fd">AndroidManifest.xml</text>
+        <text x="52" y="206" fill="#93c5fd">assembly.il</text>
+        <text x="52" y="230" fill="#c4b5fd">csharp\System_Console.cs</text>
+        <text x="52" y="254" fill="#7ef0dd">java\com\example\MainActivity.java</text>
+        <text x="52" y="278" fill="#facc15">recovered\module.py</text>
+        <text x="52" y="302" fill="#93c5fd">sample.wat</text>
+        <text x="52" y="326" fill="#a9c2e0">demo\Hello.javap.txt</text>
+        <text x="36" y="350" fill="#cfe3ff">classes\</text>
+        <text x="36" y="374" fill="#cfe3ff">dex\  dex2\</text>
+        <text x="36" y="398" fill="#cfe3ff">inner\</text>
+        <text x="20" y="432" fill="#5f7699">--out DIR replaces the default sibling folder</text>
+      </g>
+    </g>
+
+    <g transform="translate(570,100)">
+      <rect width="570" height="460" rx="14" fill="url(#panel)" stroke="#25405e"/>
+      <text x="20" y="30" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12" fill="#7f96b5">EVIDENCE.JSON</text>
+      <g font-family="Cascadia Code, Consolas, monospace" font-size="12">
+        <text x="20" y="62" fill="#cfe3ff">{</text>
+        <text x="36" y="86" fill="#7ef0dd">"ok"</text><text x="96" y="86" fill="#cfe3ff">: true,</text>
+        <text x="36" y="110" fill="#7ef0dd">"command"</text><text x="130" y="110" fill="#cfe3ff">: "analyze",</text>
+        <text x="36" y="134" fill="#7ef0dd">"format"</text><text x="122" y="134" fill="#cfe3ff">: "apk",</text>
+        <text x="36" y="158" fill="#7ef0dd">"evidence_id"</text><text x="162" y="158" fill="#cfe3ff">: "ev_19fa2866…",</text>
+        <text x="36" y="182" fill="#7ef0dd">"target"</text><text x="122" y="182" fill="#cfe3ff">: { "size": 13024512, "sha256": "8299…" },</text>
+        <text x="36" y="206" fill="#7ef0dd">"summary"</text><text x="130" y="206" fill="#cfe3ff">: { "dex_classes": 312 },</text>
+        <text x="36" y="230" fill="#7ef0dd">"coverage"</text><text x="138" y="230" fill="#cfe3ff">: { "status": "complete" },</text>
+        <text x="36" y="254" fill="#7ef0dd">"limitations"</text><text x="162" y="254" fill="#cfe3ff">: [ "signatures not verified" ],</text>
+        <text x="36" y="278" fill="#7ef0dd">"trace"</text><text x="114" y="278" fill="#cfe3ff">: [ { "ms": 0, "message": "…" } ],</text>
+        <text x="36" y="302" fill="#7ef0dd">"artifacts"</text><text x="146" y="302" fill="#cfe3ff">: [ { "path": "sources/…",</text>
+        <text x="78" y="326" fill="#cfe3ff">"kind": "source", "bytes": 368 } ],</text>
+        <text x="36" y="350" fill="#7ef0dd">"source"</text><text x="122" y="350" fill="#cfe3ff">: { "language": "java",</text>
+        <text x="78" y="374" fill="#cfe3ff">"files": [ "dex/java/com/example/MainActivity.java" ] },</text>
+        <text x="36" y="398" fill="#7ef0dd">"output"</text><text x="122" y="398" fill="#cfe3ff">: { "directory": "C:\\out\\app" }</text>
+        <text x="20" y="422" fill="#cfe3ff">}</text>
+        <text x="20" y="450" fill="#5f7699">same facts for machines; no prose parsing</text>
+      </g>
+    </g>
+  </g>
+</svg>

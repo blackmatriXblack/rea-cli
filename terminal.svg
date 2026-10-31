@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-label="Terminal trace while analyzing an APK">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070d18"/><stop offset="1" stop-color="#0b1626"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1b2d"/><stop offset="1" stop-color="#0a1422"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <text x="60" y="44" font-size="22" font-weight="700" fill="#eef6ff">Live trace</text>
+    <text x="60" y="68" font-size="13" fill="#8fa6c4">Every stage is timestamped, printed, and saved in report.txt and evidence.json.</text>
+
+    <g transform="translate(60,92)">
+      <rect width="1080" height="520" rx="14" fill="url(#win)" stroke="#26405f"/>
+      <path d="M0 14a14 14 0 0 1 14-14h1052a14 14 0 0 1 14 14v28H0z" fill="#0f1b2c"/>
+      <circle cx="22" cy="21" r="5.5" fill="#ff6b6b"/>
+      <circle cx="44" cy="21" r="5.5" fill="#fbbf24"/>
+      <circle cx="66" cy="21" r="5.5" fill="#34d399"/>
+      <text x="92" y="26" font-family="Cascadia Code, Consolas, monospace" font-size="12" fill="#7f93b3">C:\samples\app.apk  —  rea analyze</text>
+
+      <g font-family="Cascadia Code, Consolas, monospace" font-size="13.5">
+        <text x="26" y="78" fill="#fbbf24">[   0.000s]</text><text x="126" y="78" fill="#cfe3ff">checking target app.apk</text>
+        <text x="26" y="104" fill="#fbbf24">[   0.002s]</text><text x="126" y="104" fill="#cfe3ff">read 12.41 MiB (13,024,512 bytes)</text>
+        <text x="26" y="130" fill="#fbbf24">[   0.003s]</text><text x="126" y="130" fill="#cfe3ff">sha256 8299c3c7177c11d12a15...</text>
+        <text x="26" y="156" fill="#fbbf24">[   0.004s]</text><text x="126" y="156" fill="#cfe3ff">detected Android package (APK), zip container [apk]</text>
+        <text x="26" y="182" fill="#fbbf24">[   0.006s]</text><text x="126" y="182" fill="#cfe3ff">zip: 1,842 entries, 1 dex, 6 native libraries</text>
+        <text x="26" y="208" fill="#fbbf24">[   0.014s]</text><text x="126" y="208" fill="#cfe3ff">manifest decoded: components, permissions, SDK levels</text>
+        <text x="26" y="234" fill="#fbbf24">[   0.041s]</text><text x="126" y="234" fill="#cfe3ff">dex classes: 312</text>
+        <text x="26" y="260" fill="#fbbf24">[   0.118s]</text><text x="126" y="260" fill="#cfe3ff">lifting Java method bodies from Dalvik registers</text>
+        <text x="26" y="286" fill="#fbbf24">[   0.402s]</text><text x="126" y="286" fill="#cfe3ff">Java skeletons: 312 file(s)</text>
+        <text x="26" y="312" fill="#fbbf24">[   0.405s]</text><text x="126" y="312" fill="#cfe3ff">reader finished: 315 artifact(s), 3 limitation(s)</text>
+        <text x="26" y="338" fill="#fbbf24">[   0.452s]</text><text x="126" y="338" fill="#cfe3ff">engines available: 1 (jadx)</text>
+
+        <text x="26" y="386" fill="#2dd4bf" font-weight="700">source files: 312</text>
+        <text x="44" y="412" fill="#93c5fd">C:\out\app\dex\java\com\example\MainActivity.java</text>
+        <text x="44" y="436" fill="#93c5fd">C:\out\app\dex\java\com\example\net\ApiClient.java</text>
+        <text x="44" y="460" fill="#5f7699">... 310 more (see SOURCE-INDEX.txt)</text>
+
+        <text x="26" y="500" fill="#94a3b8">rea&gt;</text>
+        <rect x="78" y="488" width="9" height="16" fill="#2dd4bf"/>
+      </g>
+
+      <g transform="translate(760,60)" font-family="Cascadia Code, Consolas, monospace" font-size="11.5">
+        <rect width="286" height="118" rx="10" fill="#0b1626" stroke="#223a57"/>
+        <text x="16" y="24" fill="#7ef0dd">coverage</text>
+        <text x="16" y="46" fill="#a9c2e0">status    complete</text>
+        <text x="16" y="66" fill="#a9c2e0">examined  312 / 312</text>
+        <text x="16" y="86" fill="#a9c2e0">exhausted true</text>
+        <text x="16" y="106" fill="#5f7699">evidence ev_19fa2866...</text>
+      </g>
+    </g>
+  </g>
+</svg>
